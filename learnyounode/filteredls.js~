@@ -1,0 +1,13 @@
+var fs = require('fs')
+var path = require('path')
+
+var directory = process.argv[2]
+var extension = process.argv[3]
+
+fs.readdir(directory, function filterExt(err, files) {
+    filtered = files.filter(function extMatches(file) {
+	return path.extname(file) === extension
+	})
+    console.log(filtered)
+})
+

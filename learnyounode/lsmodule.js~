@@ -1,0 +1,16 @@
+//lsmodule.js
+//Modularized version of the filtered ls problem in nodeschool
+
+var fs = require('fs')
+var path = require('path')
+
+function filterExt(dir, ext, callback) {
+    ext = '.' + ext
+    files = fs.readdir(dir, callback)
+    filtered = files.filter(function (str) {
+	return path.extname(str) === ext
+    })
+    callback(err, files)
+}
+
+module.exports = filterExt

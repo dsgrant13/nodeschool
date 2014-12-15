@@ -1,0 +1,3 @@
+var fs = require('fs');
+file = fs.readFileSync(ex2.js);
+console.log(file);
