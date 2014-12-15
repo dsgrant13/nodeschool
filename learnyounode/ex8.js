@@ -3,7 +3,7 @@
 
 var http = require('http')
 
-complete_str = ''
+var complete_str = ''
 
 http.get(process.argv[2], function(response) {
     response.setEncoding('utf8')
@@ -16,4 +16,3 @@ http.get(process.argv[2], function(response) {
 	console.log(complete_str)
     })
 })
-	
